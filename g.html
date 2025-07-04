@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switch Example</title>
+</head>
+<body>
+  <h1 id="dayMessage">What day is it?</h1>
+  <button onclick="showDayMessage()">Find Out</button>
+
+  <script>
+    function showDayMessage() {
+      let day = new Date().getDay(); 
+      let dayMessageElement = document.getElementById("dayMessage");
+
+      switch (day) {
+        case 0:
+          dayMessageElement.textContent = "It's Sunday! Relax and enjoy!";
+          break;
+        case 1:
+          dayMessageElement.textContent = "It's Monday! Let's start the week strong!";
+          break;
+        case 2:
+          dayMessageElement.textContent = "It's Tuesday! Keep going!";
+          break;
+        case 3:
+          dayMessageElement.textContent = "It's Wednesday! Halfway there!";
+          break;
+        case 4:
+          dayMessageElement.textContent = "It's Thursday! Almost the weekend!";
+          break;
+        case 5:
+          dayMessageElement.textContent = "It's Friday! Time to celebrate!";
+          break;
+        case 6:
+          dayMessageElement.textContent = "It's Saturday! Have fun!";
+          break;
+        default:
+          dayMessageElement.textContent = "Unknown day!";
+      }
+    }
+  </script>
+</body>
+</html>

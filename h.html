@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If-Else </title>
+</head>
+<body>
+  <!-- <h1 id="greeting">Hello!</h1>
+  <button onclick="changeGreeting()">Click Me</button>
+
+  <script>
+    function changeGreeting() {
+      const hour = new Date().getHours();
+      const greetingElement = document.getElementById("greeting");
+
+      if (hour < 9) {
+        greetingElement.textContent = "Good Morning!";
+      } else if (hour < 12) {
+        greetingElement.textContent = "Good Afternoon!";
+      } else {
+        greetingElement.textContent = "Good Evening!";
+      }
+    }
+  </script> -->
+<h2>enter the percentage</h2>
+
+<input type="number" name="percentage" id="percent" placeholder="Enter your perceentage" min='0' max="100"> 
+<button onclick="percentage ()" id="clickme" >grade</button>
+<p id="result"></p>
+<script>
+  function percentage(){
+      let percent = document.getElementById("percent").value;
+      let result = document.getElementById("result");
+
+      if (percent === "") {
+        result.innerText = "Please enter a percentage.";
+        return;
+      }
+
+      percent = parseFloat(percent);
+      let grade;
+     
+      if (percent>=90){
+       grade='garde A'
+      }
+      else if(percent>=80){
+       grade='grade B'
+      }
+      else if(percent>=70){
+        grade='grade C'
+      }
+      else{
+        grade='fail F'
+      }
+result.innerText=`Grade:${grade}`;
+  }
+</script>
+
+  
+</body>
+</html>

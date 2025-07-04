@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grade Calculator</title>
+  <!-- <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px 0;
+    }
+    #result {
+      font-weight: bold;
+    }
+  </style> -->
+</head>
+<body>
+
+  <h2>Enter Percentage to Get Grade</h2>
+
+  <label for="percent">Percentage:</label>
+  <input type="number" id="percent" placeholder="Enter percentage" min="0" max="100" />
+  <br>
+  <button onclick="getGrade()">Get Grade</button>
+
+  <p id="result"></p>
+
+  <script>
+    function getGrade() {
+      let percent = document.getElementById("percent").value;
+      let result = document.getElementById("result");
+
+      if (percent === "") {
+        result.innerText = "Please enter a percentage.";
+        return;
+      }
+
+      percent = parseFloat(percent);
+      let grade;
+
+      if (percent >= 90) {
+        grade = "A";
+      } else if (percent >= 80) {
+        grade = "B";
+      } else if (percent >= 70) {
+        grade = "C";
+      } else if (percent >= 60) {
+        grade = "D";
+      } else if (percent >= 40) {
+        grade = "E";
+      } else {
+        grade = "F (Fail)";
+      }
+
+      result.innerText = `Grade: ${grade}`;
+    }
+  </script>
+
+</body>
+</html>
